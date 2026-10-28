@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bruno Santopietro Machado · Currículo</title>
+  <meta name="description" content="Currículo de Bruno Santopietro Pousa Machado — Ciências Econômicas (UFRJ), Estagiário de Alocação na InvestSmartXP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="nav" id="nav">
+    <a href="#topo" class="nav-logo" id="nav-logo">BM</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#formacao">Formação</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+      <button class="theme-btn" id="theme-btn" aria-label="Alternar tema">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="topo">
+      <div class="blob blob-1" data-speed="0.25"></div>
+      <div class="blob blob-2" data-speed="-0.15"></div>
+      <div class="hero-inner">
+        <div class="avatar" id="avatar"></div>
+        <p class="eyebrow" id="hero-local"></p>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <p class="hero-title" id="hero-title"></p>
+        <p class="hero-typed"><span id="typed"></span><span class="caret">|</span></p>
+        <div class="hero-cta" id="hero-cta"></div>
+      </div>
+      <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="sobre-sticky">
+        <p class="section-label">01 · Sobre</p>
+        <p class="sobre-text" id="sobre-text"></p>
+      </div>
+    </section>
+
+    <section class="numeros" id="numeros"></section>
+
+    <section class="section" id="experiencia">
+      <p class="section-label reveal">02 · Experiência</p>
+      <h2 class="section-title reveal">Trajetória profissional</h2>
+      <div class="timeline" id="timeline">
+        <div class="timeline-line"><span id="timeline-fill"></span></div>
+      </div>
+    </section>
+
+    <section class="section" id="formacao">
+      <p class="section-label reveal">03 · Formação</p>
+      <h2 class="section-title reveal">Educação e certificações</h2>
+      <div class="cards" id="formacao-cards"></div>
+    </section>
+
+    <section class="section" id="habilidades">
+      <p class="section-label reveal">04 · Habilidades</p>
+      <h2 class="section-title reveal">Competências</h2>
+      <div class="skills-grid">
+        <div>
+          <ul class="areas" id="areas"></ul>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div>
+          <h3 class="sub-title first reveal">Idiomas</h3>
+          <div class="skills-bars" id="skills-bars"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <p class="section-label reveal">05 · Contato</p>
+      <h2 class="contato-title reveal">Vamos conversar?</h2>
+      <div class="hero-cta reveal" id="contato-cta"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p id="footer-text"></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
