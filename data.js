@@ -26,6 +26,15 @@ window.CV = {
   sobre:
     "Estudante de Ciências Econômicas na UFRJ, atuando como Estagiário de Alocação na InvestSmartXP, com experiência em construção e acompanhamento de carteiras, análise de produtos financeiros e suporte à decisão de alocação de ativos. Vivência prévia em controle financeiro e gestão de projetos, com domínio de fluxo de caixa, DRE e análise de resultados.",
 
+  // Ficha rápida exibida abaixo do texto "Sobre"
+  fatos: [
+    { k: "Atuação", v: "Estagiário de Alocação · InvestSmartXP" },
+    { k: "Formação", v: "Ciências Econômicas · UFRJ · 6º período" },
+    { k: "Certificação", v: "ANCORD — Agente Autônomo de Investimentos" },
+    { k: "Idiomas", v: "Português · Inglês fluente · Espanhol intermediário" },
+    { k: "Base", v: "Rio de Janeiro, RJ" }
+  ],
+
   // Números de destaque (animam quando aparecem na tela)
   numeros: [
     { valor: 8.1, casas: 1, sufixo: "", rotulo: "CR acumulado na UFRJ" },
