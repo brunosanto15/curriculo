@@ -41,6 +41,7 @@
     ? `<img src="${esc(cv.foto)}" alt="${esc(cv.nome)}">`
     : esc($("#nav-logo").textContent);
 
+  $("#hero-mark").textContent = $("#nav-logo").textContent;
   $("#hero-local").textContent = cv.localizacao;
   $("#hero-title").textContent = cv.titulo;
   // letras agrupadas por palavra para o nome não quebrar no meio de uma palavra
@@ -69,11 +70,15 @@
     .map((w) => `<span class="word">${esc(w)}</span>`)
     .join(" ");
 
+  $("#fatos").innerHTML = (cv.fatos || [])
+    .map((f, i) => `<div class="reveal" style="transition-delay:${0.2 + i * 0.08}s"><dt>${esc(f.k)}</dt><dd>${esc(f.v)}</dd></div>`)
+    .join("");
+
   $("#numeros").innerHTML = cv.numeros
     .map(
       (n, i) => `
       <div class="numero reveal" style="transition-delay:${i * 0.12}s">
-        <strong data-count="${Number(n.valor)}" data-decimals="${Number(n.casas) || 0}" data-suffix="${esc(n.sufixo)}">0${esc(n.sufixo)}</strong>
+        <strong><span data-count="${Number(n.valor)}" data-decimals="${Number(n.casas) || 0}">0</span>${n.sufixo ? `<sup class="sufixo">${esc(n.sufixo)}</sup>` : ""}</strong>
         <span>${esc(n.rotulo)}</span>
       </div>`
     )
@@ -161,9 +166,8 @@
   // ---------- contadores ----------
   function contar(el) {
     const alvo = Number(el.dataset.count);
-    const sufixo = el.dataset.suffix;
     const casas = Number(el.dataset.decimals);
-    const fmt = (v) => v.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas }) + sufixo;
+    const fmt = (v) => v.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
     if (reduceMotion) { el.textContent = fmt(alvo); return; }
     const inicio = performance.now();
     const dur = 1400;
@@ -193,9 +197,11 @@
   // ---------- efeitos ligados à posição do scroll ----------
   const bar = $("#progress-bar");
   const nav = $("#nav");
-  const blobs = document.querySelectorAll(".blob");
+  const blobs = document.querySelectorAll("[data-speed]");
   const sobre = $("#sobre");
+  const sobreText = $("#sobre-text");
   const words = sobre.querySelectorAll(".word");
+  const sobreFixo = window.matchMedia("(min-width: 761px)");
   const timeline = $("#timeline");
   const fill = $("#timeline-fill");
   const navLinks = [...links.querySelectorAll("a")];
@@ -215,9 +221,15 @@
       blobs.forEach((b) => (b.style.transform = `translateY(${y * b.dataset.speed}px)`));
     }
 
-    // Sobre: acende palavra por palavra enquanto a seção fica fixa
-    const r = sobre.getBoundingClientRect();
-    const pSobre = clamp(-r.top / (r.height - vh) * 1.15);
+    // Sobre: acende palavra por palavra enquanto a seção fica fixa (no celular, enquanto o texto cruza a tela)
+    let pSobre;
+    if (sobreFixo.matches) {
+      const r = sobre.getBoundingClientRect();
+      pSobre = clamp((-r.top / (r.height - vh)) * 1.25);
+    } else {
+      const r = sobreText.getBoundingClientRect();
+      pSobre = clamp((vh * 0.85 - r.top) / (r.height + vh * 0.35));
+    }
     const acesas = Math.round(pSobre * words.length);
     words.forEach((w, i) => w.classList.toggle("lit", i < acesas));
 
