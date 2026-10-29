@@ -24,13 +24,13 @@ window.CV = {
 
   // Texto da seção "Sobre" (as palavras acendem conforme a pessoa rola a página)
   sobre:
-    "Estudante de Ciências Econômicas na UFRJ, atuando como Estagiário de Alocação na InvestSmartXP, com experiência em construção e acompanhamento de carteiras, análise de produtos financeiros e suporte à decisão de alocação de ativos. Vivência prévia em controle financeiro e gestão de projetos, com domínio de fluxo de caixa, DRE e análise de resultados.",
+    "Estudante de Ciências Econômicas na UFRJ, atuando como Estagiário de Alocação na InvestSmartXP, com experiência em construção e acompanhamento de carteiras, análise de produtos financeiros e suporte à decisão de alocação de ativos. Certificado pela ANBIMA (CPA) e pela ANCORD. Vivência prévia em controle financeiro e gestão de projetos, com domínio de fluxo de caixa, DRE e análise de resultados.",
 
   // Ficha rápida exibida abaixo do texto "Sobre"
   fatos: [
     { k: "Atuação", v: "Estagiário de Alocação · InvestSmartXP" },
     { k: "Formação", v: "Ciências Econômicas · UFRJ · 6º período" },
-    { k: "Certificação", v: "ANCORD — Agente Autônomo de Investimentos" },
+    { k: "Certificações", v: "CPA (ANBIMA) · ANCORD — Agente Autônomo de Investimentos" },
     { k: "Idiomas", v: "Português · Inglês fluente · Espanhol intermediário" },
     { k: "Base", v: "Rio de Janeiro, RJ" }
   ],
@@ -39,6 +39,7 @@ window.CV = {
   numeros: [
     { valor: 8.1, casas: 1, sufixo: "", rotulo: "CR acumulado na UFRJ" },
     { valor: 2, sufixo: "+", rotulo: "anos de experiência profissional" },
+    { valor: 2, sufixo: "", rotulo: "certificações do mercado (CPA e ANCORD)" },
     { valor: 3, sufixo: "", rotulo: "idiomas" }
   ],
 
@@ -93,6 +94,7 @@ window.CV = {
   ],
 
   certificacoes: [
+    { nome: "CPA — Certificação Profissional ANBIMA", emissor: "ANBIMA", ano: "Distribuição de produtos de investimento" },
     { nome: "Certificação ANCORD — Agente Autônomo de Investimentos (AAI)", emissor: "ANCORD", ano: "" },
     { nome: "Pré-Mestrado Internacional em Inteligência Artificial", emissor: "Magno Alves e Faculdade HUB", ano: "" },
     { nome: "Institute for Academic and Professional Studies (IAPS)", emissor: "University of Pennsylvania", ano: "Habilidades acadêmicas e comunicação profissional em inglês" },
@@ -109,7 +111,7 @@ window.CV = {
 
   // Competências em formato de etiqueta
   competencias: [
-    "Alocação de ativos", "Gestão de carteiras", "Produtos financeiros", "Perfil de risco",
+    "CPA ANBIMA", "ANCORD", "Alocação de ativos", "Gestão de carteiras", "Produtos financeiros", "Perfil de risco",
     "Fluxo de caixa", "DRE", "Relatórios financeiros", "Inteligência artificial",
     "Gestão de projetos", "Indicadores (KPIs)", "E-commerce"
   ],
