@@ -3,124 +3,245 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bruno Santopietro Machado · Currículo</title>
-  <meta name="description" content="Currículo de Bruno Santopietro Pousa Machado — Ciências Econômicas (UFRJ), Estagiário de Alocação na InvestSmartXP, certificado CPA (ANBIMA).">
+  <title>Bruno Santopietro Machado · Portfólio</title>
+  <meta name="description" content="Portfólio de Bruno Santopietro Pousa Machado — Ciências Econômicas (UFRJ), Estagiário de Alocação na InvestSmartXP, certificado CPA (ANBIMA).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,300..600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,300..600;1,7..72,300..500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- aplica o tema salvo antes de pintar a página (evita piscar) -->
+  <script>try { var t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
 </head>
 <body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
   <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
+  <!-- ícones: um sprite só, traço fino no estilo Lucide -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+      <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .3"/></symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.37l-.36-.22-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.88 9.88 0 0 1 9.88 9.89c0 5.45-4.43 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.33 11.9-11.89a11.82 11.82 0 0 0-3.49-8.41Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-copia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+      <symbol id="i-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-seta-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-seta-c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+      <symbol id="i-baixo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-esq" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-dir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-menu"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-alocacao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 15.9A10 10 0 1 1 8 2.8"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></symbol>
+      <symbol id="i-produtos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+      <symbol id="i-financas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M8 6.5h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18.5h8"/></symbol>
+      <symbol id="i-projetos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v7M12 7v4M16 7v9"/></symbol>
+      <symbol id="i-ia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+      <symbol id="i-maleta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="13.5" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2.5 13h19"/></symbol>
+      <symbol id="i-capelo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+      <symbol id="i-selo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></symbol>
+      <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-globo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5a14.5 14.5 0 0 1 0 19M12 2.5a14.5 14.5 0 0 0 0 19"/></symbol>
+    </defs>
+  </svg>
+
   <header class="nav" id="nav">
-    <a href="#topo" class="nav-logo" id="nav-logo">BM</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav-links" id="nav-links">
-      <a href="#sobre" class="flip">Sobre</a>
-      <a href="#experiencia" class="flip">Experiência</a>
-      <a href="#formacao" class="flip">Formação</a>
-      <a href="#habilidades" class="flip">Competências</a>
-      <a href="#contato" class="flip">Contato</a>
-      <button class="theme-btn" id="theme-btn" aria-label="Alternar tema">◐</button>
-    </nav>
+    <div class="wrap nav-in">
+      <a href="#topo" class="nav-logo" id="nav-logo" aria-label="Voltar ao topo">BM</a>
+      <nav class="nav-links" id="nav-links" aria-label="Seções">
+        <a href="#sobre" class="flip">Sobre</a>
+        <a href="#experiencia" class="flip">Experiência</a>
+        <a href="#formacao" class="flip">Formação</a>
+        <a href="#certificados" class="flip">Certificações</a>
+        <a href="#contato" class="flip">Contato</a>
+      </nav>
+      <div class="nav-dir">
+        <span class="nav-social" id="nav-social"></span>
+        <button class="ico" id="theme-btn" type="button" aria-label="Alternar tema claro e escuro"><svg class="i"><use href="#i-lua"/></svg></button>
+        <button class="ico nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links"><svg class="i"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="topo">
-      <div class="hero-mark" data-speed="0.3" aria-hidden="true" id="hero-mark"></div>
-      <div class="hero-inner">
-        <div class="hero-top">
-          <div class="avatar" id="avatar"></div>
-          <p class="mono" id="hero-local"></p>
-        </div>
-        <h1 class="hero-name" id="hero-name"></h1>
-        <span class="dashline hero-line"></span>
-        <div class="hero-bottom">
-          <p class="hero-title" id="hero-title"></p>
-          <p class="hero-typed mono"><span id="typed"></span><span class="caret">_</span></p>
-        </div>
-        <div class="hero-cta" id="hero-cta"></div>
-      </div>
-      <a href="#sobre" class="scroll-hint mono">Role para continuar ↓</a>
-    </section>
+  <!-- capa: gráfico decorativo que se desenha sozinho; a mira segue o ponteiro -->
+  <div class="capa" id="capa" aria-hidden="true">
+    <svg id="capa-svg" viewBox="0 0 1600 360" preserveAspectRatio="xMidYMid slice"></svg>
+    <span class="capa-mark" data-speed="0.25">BM</span>
+  </div>
 
-    <section class="sobre" id="sobre">
-      <div class="sobre-sticky">
-        <div class="sobre-grid">
-          <span class="dashline"></span>
+  <section class="hero" id="topo">
+    <div class="wrap">
+      <div class="hero-id">
+        <div class="avatar" id="avatar"></div>
+        <div class="hero-nome">
+          <p class="mono hero-local"><svg class="i"><use href="#i-pin"/></svg><span id="hero-local"></span></p>
+          <h1 class="hero-name" id="hero-name"></h1>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-txt">
+          <p class="hero-chamada split" id="hero-chamada"></p>
+          <p class="hero-resumo reveal" id="hero-resumo"></p>
+          <div class="ctas reveal" id="hero-cta"></div>
+          <p class="status reveal"><i aria-hidden="true"></i><span id="hero-status"></span></p>
+        </div>
+
+        <div class="ficha tilt reveal" role="img" id="ficha">
+          <div class="ficha-top" aria-hidden="true"><span></span><span></span><span></span><em>bruno.cv</em></div>
+          <dl class="ficha-dl" id="ficha-dl" aria-hidden="true"></dl>
+          <p class="ficha-typed" aria-hidden="true"><span class="prompt">foco &gt;</span> <span id="typed"></span><span class="caret">_</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="conteudo">
+    <!-- SOBRE (faixa azul): índice fixo + três blocos -->
+    <section class="sobre band" id="sobre">
+      <div class="wrap">
+        <div class="sec-h">
           <p class="section-label">[01] Sobre</p>
-          <div class="sobre-body">
-            <p class="sobre-text" id="sobre-text"></p>
-            <dl class="fatos" id="fatos"></dl>
+          <h2 class="section-title split">Sobre mim.</h2>
+        </div>
+        <div class="sobre-grid">
+          <nav class="indice" id="indice" aria-label="Partes da seção Sobre">
+            <p class="mono">sobre</p>
+            <ol>
+              <li><a href="#quem-sou"><span>01</span><span>Quem sou</span></a></li>
+              <li><a href="#o-que-faco"><span>02</span><span>O que faço</span></a></li>
+              <li><a href="#diferenciais"><span>03</span><span>Diferenciais</span></a></li>
+            </ol>
+          </nav>
+
+          <div class="blocos">
+            <div class="bloco" id="quem-sou">
+              <p class="bloco-k mono"><b>01</b> / identidade</p>
+              <h3 class="bloco-t">Economia, mercado<br><span>e decisão com método.</span></h3>
+              <p class="sobre-text" id="sobre-text"></p>
+              <dl class="fatos" id="fatos"></dl>
+              <ul class="chips" id="chips" aria-label="Competências"></ul>
+            </div>
+
+            <div class="bloco" id="o-que-faco">
+              <p class="bloco-k mono"><b>02</b> / capacidades</p>
+              <h3 class="bloco-t">Da análise do produto<br><span>à carteira do cliente.</span></h3>
+              <!-- lista à esquerda, painel em destaque à direita; avança sozinho até a pessoa escolher um item -->
+              <div class="caps" id="caps">
+                <div class="caps-lista" id="caps-lista" role="tablist" aria-label="Capacidades" aria-orientation="vertical"></div>
+                <div class="caps-painel spot" id="caps-painel" role="tabpanel"></div>
+              </div>
+              <p class="caps-dica mono" id="caps-dica"></p>
+            </div>
+
+            <div class="bloco" id="diferenciais">
+              <p class="bloco-k mono"><b>03</b> / diferenciais</p>
+              <h3 class="bloco-t">Base sólida.<br><span>Com certificação do lado.</span></h3>
+              <ul class="dif" id="dif"></ul>
+              <h4 class="sub-title mono">Idiomas</h4>
+              <div class="idiomas" id="idiomas"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="numeros" id="numeros"></section>
+    <!-- EM NÚMEROS (faixa clara e fina) -->
+    <section class="numeros" aria-label="Em números">
+      <div class="wrap numeros-grid" id="numeros"></div>
+    </section>
+
+    <!-- LETREIRO: acelera e inverte com a rolagem -->
+    <div class="letreiro band" aria-hidden="true">
+      <div class="trilho" id="trilho"></div>
+    </div>
 
     <section class="section" id="experiencia">
-      <div class="section-head">
-        <span class="dashline"></span>
-        <p class="section-label">[02] Experiência</p>
-        <h2 class="section-title split">Trajetória profissional</h2>
-      </div>
-      <div class="timeline" id="timeline">
-        <div class="timeline-line"><span id="timeline-fill"></span></div>
-      </div>
-    </section>
-
-    <!-- seção fixa: a rolagem vertical move os cards na horizontal -->
-    <section class="hscroll" id="formacao">
-      <div class="hscroll-sticky">
-        <div class="section-head">
-          <span class="dashline"></span>
-          <p class="section-label">[03] Formação</p>
-          <h2 class="section-title split">Educação e certificações</h2>
+      <div class="wrap">
+        <div class="sec-h">
+          <p class="section-label">[02] Experiência</p>
+          <h2 class="section-title split">Trajetória profissional.</h2>
+          <p class="sec-sub">Uma aba por empresa, da mais recente para a mais antiga.</p>
         </div>
-        <div class="hscroll-viewport">
-          <div class="hscroll-track" id="formacao-cards"></div>
+        <div class="abas-linha">
+          <div class="abas" role="tablist" aria-label="Empresas" id="abas"></div>
+          <button class="aba-prox" type="button" id="aba-prox"></button>
         </div>
-        <div class="hscroll-foot">
-          <div class="hscroll-progress" id="hs-progress"></div>
-          <p class="mono hscroll-count" id="hs-count"></p>
-        </div>
+        <div class="paineis" id="paineis"></div>
       </div>
     </section>
 
-    <section class="section" id="habilidades">
-      <div class="section-head">
-        <span class="dashline"></span>
-        <p class="section-label">[04] Competências</p>
-        <h2 class="section-title split">Onde eu atuo</h2>
-      </div>
-      <div class="skills-grid">
+    <section class="section alt" id="formacao">
+      <div class="wrap traj-grid">
         <div>
-          <ul class="areas" id="areas"></ul>
-          <div class="chips" id="chips"></div>
+          <div class="sec-h">
+            <p class="section-label">[03] Formação</p>
+            <h2 class="section-title split">Formação acadêmica.</h2>
+          </div>
+          <div class="tl" id="tl">
+            <div class="tl-line" aria-hidden="true"><span id="tl-fill"></span></div>
+            <ol id="tl-lista"></ol>
+          </div>
         </div>
-        <div>
-          <h3 class="sub-title mono reveal">Idiomas</h3>
-          <div class="skills-bars" id="skills-bars"></div>
+
+        <div id="certificados">
+          <div class="sec-h">
+            <p class="section-label">[04] Certificações</p>
+            <h2 class="section-title split">Certificações e cursos.</h2>
+          </div>
+          <div class="cert-top" id="cert-top"></div>
+          <div class="cert-mais" id="cert-mais" hidden><ul class="cert-lista" id="cert-lista"></ul></div>
+          <button class="btn btn-g cert-btn" type="button" id="cert-btn" aria-expanded="false" aria-controls="cert-mais"></button>
         </div>
       </div>
     </section>
 
     <section class="contato" id="contato">
-      <p class="section-label">[05] Contato</p>
-      <h2 class="contato-title split">Vamos conversar?</h2>
-      <div class="hero-cta reveal" id="contato-cta"></div>
+      <div class="wrap">
+        <div class="contato-box spot">
+          <p class="section-label">[05] Contato</p>
+          <h2 class="contato-title split">Vamos conversar?</h2>
+          <p class="contato-sub reveal" id="contato-sub"></p>
+          <div class="acoes reveal" id="contato-acoes"></div>
+          <div class="linha2 reveal" id="contato-links"></div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer mono">
-    <p id="footer-text"></p>
+  <footer class="footer band">
+    <div class="wrap footer-in mono">
+      <p id="footer-text"></p>
+      <a href="#topo" class="flip">voltar ao topo</a>
+    </div>
   </footer>
 
+  <a href="#topo" class="topo-btn" id="topo-btn" aria-label="Voltar ao topo">
+    <svg class="anel" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" pathLength="1"/><circle class="anel-on" id="anel" cx="24" cy="24" r="22" pathLength="1"/></svg>
+    <svg class="i"><use href="#i-seta-c"/></svg>
+  </a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- visualizador de certificados: a imagem cresce a partir da miniatura -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lb-nome" hidden>
+    <div class="lb-fundo" id="lb-fundo"></div>
+    <figure class="lb-fig">
+      <img id="lb-img" alt="">
+      <figcaption>
+        <span class="lb-nome" id="lb-nome"></span>
+        <span class="lb-info mono"><span id="lb-sub"></span><span id="lb-cont"></span><a id="lb-orig" target="_blank" rel="noopener">abrir original <svg class="i"><use href="#i-seta-ext"/></svg></a></span>
+      </figcaption>
+    </figure>
+    <button class="lb-b lb-x" id="lb-x" type="button" aria-label="Fechar"><svg class="i"><use href="#i-x"/></svg></button>
+    <button class="lb-b lb-ant" id="lb-ant" type="button" aria-label="Certificado anterior"><svg class="i"><use href="#i-esq"/></svg></button>
+    <button class="lb-b lb-prox" id="lb-prox" type="button" aria-label="Próximo certificado"><svg class="i"><use href="#i-dir"/></svg></button>
+  </div>
+
   <script src="data.js"></script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,11 +4,17 @@
 
 window.CV = {
   nome: "Bruno Santopietro Pousa Machado",
-  titulo: "Estudante de Ciências Econômicas (UFRJ) · Estagiário de Alocação na InvestSmartXP",
+  titulo: "Ciências Econômicas (UFRJ) · Estagiário de Alocação na InvestSmartXP",
   localizacao: "Rio de Janeiro, RJ",
-  foto: "", // ex.: "foto.jpg" (coloque o arquivo na mesma pasta). Vazio = mostra as iniciais.
+  foto: "img/bruno.jpg", // vazio = mostra as iniciais
 
-  // Frases que aparecem "digitando" no topo da página
+  // Topo da página
+  chamada: "Economia na teoria. Alocação na prática.",
+  resumo:
+    "Estudante de Ciências Econômicas na UFRJ e estagiário de alocação na InvestSmartXP. Apoio a construção e o acompanhamento de carteiras alinhadas ao perfil de risco e aos objetivos de cada cliente.",
+  status: "Hoje no time de alocação da InvestSmartXP",
+
+  // Frases que aparecem "digitando" no card do topo
   frases: [
     "Alocação de ativos",
     "Gestão de carteiras",
@@ -19,8 +25,20 @@ window.CV = {
   links: {
     linkedin: "https://www.linkedin.com/in/bruno-santopietro-machado/",
     github: "https://github.com/brunosanto15",
-    email: "brunosanto1510@gmail.com"
+    email: "brunosanto1510@gmail.com",
+    whatsapp: "5521999298376", // só números, com DDI 55 e DDD
+    whatsappMensagem: "Olá, Bruno! Vim pelo seu portfólio e queria conversar."
   },
+
+  // Card em estilo terminal no topo (chave → valor)
+  ficha: [
+    { k: "cargo", v: "Estagiário de Alocação" },
+    { k: "casa", v: "InvestSmartXP" },
+    { k: "curso", v: "Ciências Econômicas · UFRJ" },
+    { k: "cr", v: "8,0" },
+    { k: "certificações", v: "CPA · ANCORD" },
+    { k: "idiomas", v: "PT · EN · ES" }
+  ],
 
   // Texto da seção "Sobre" (as palavras acendem conforme a pessoa rola a página)
   sobre:
@@ -30,20 +48,36 @@ window.CV = {
   fatos: [
     { k: "Atuação", v: "Estagiário de Alocação · InvestSmartXP" },
     { k: "Formação", v: "Ciências Econômicas · UFRJ · 6º período" },
-    { k: "Certificações", v: "CPA (ANBIMA) · ANCORD — Agente Autônomo de Investimentos" },
-    { k: "Idiomas", v: "Português · Inglês fluente · Espanhol intermediário" },
+    { k: "Certificações", v: "CPA (ANBIMA) · ANCORD" },
     { k: "Base", v: "Rio de Janeiro, RJ" }
+  ],
+
+  // "O que faço": cards que deslizam na horizontal. icone: alocacao, produtos, financas, projetos, ia
+  capacidades: [
+    { icone: "alocacao", titulo: "Alocação de ativos", texto: "Apoio à construção de carteiras alinhadas ao perfil de risco e aos objetivos de cada cliente.", onde: "InvestSmartXP" },
+    { icone: "produtos", titulo: "Análise de produtos", texto: "Análise de produtos financeiros como suporte à tomada de decisão de alocação.", onde: "InvestSmartXP" },
+    { icone: "financas", titulo: "Controle financeiro", texto: "Fluxo de caixa, DRE e acompanhamento de pagamentos e obrigações financeiras.", onde: "Arena Center" },
+    { icone: "projetos", titulo: "Gestão de projetos", texto: "Supervisão da implantação do site e do canal de e-commerce, com acompanhamento de indicadores.", onde: "Arena Center" },
+    { icone: "ia", titulo: "Economia e IA", texto: "Estudo de inteligência artificial aplicada à economia e aos mercados.", onde: "Pré-Mestrado em IA" }
+  ],
+
+  // "Diferenciais": frase curta em negrito + complemento
+  diferenciais: [
+    { titulo: "Certificado para o mercado.", texto: "CPA (ANBIMA) e ANCORD, de Assessor de Investimento" },
+    { titulo: "Base acadêmica sólida.", texto: "CR acumulado de 8,0 em Ciências Econômicas na UFRJ" },
+    { titulo: "Finanças na prática.", texto: "quase dois anos cuidando de fluxo de caixa, DRE e pagamentos na Arena Center" },
+    { titulo: "Comunicação em três idiomas.", texto: "português nativo, inglês fluente e espanhol intermediário" }
   ],
 
   // Números de destaque (animam quando aparecem na tela)
   numeros: [
-    { valor: 8.1, casas: 1, sufixo: "", rotulo: "CR acumulado na UFRJ" },
-    { valor: 2, sufixo: "+", rotulo: "anos de experiência profissional" },
-    { valor: 2, sufixo: "", rotulo: "certificações do mercado (CPA e ANCORD)" },
-    { valor: 3, sufixo: "", rotulo: "idiomas" }
+    { valor: 8.0, casas: 1, sufixo: "", rotulo: "CR acumulado na UFRJ", link: "#formacao", acao: "ver formação" },
+    { valor: 2, sufixo: "+", rotulo: "anos de experiência profissional", link: "#experiencia", acao: "ver experiência" },
+    { valor: 2, sufixo: "", rotulo: "certificações do mercado (CPA e ANCORD)", link: "#certificados", acao: "ver certificações" },
+    { valor: 3, sufixo: "", rotulo: "idiomas", link: "#diferenciais", acao: "ver idiomas" }
   ],
 
-  // Experiência — do mais recente para o mais antigo
+  // Experiência — do mais recente para o mais antigo (cada uma vira uma aba)
   experiencias: [
     {
       cargo: "Estagiário de Alocação",
@@ -55,7 +89,8 @@ window.CV = {
         "Apoio à construção e ao acompanhamento de carteiras de investimentos de clientes.",
         "Análise de produtos financeiros e suporte à tomada de decisão de alocação de ativos.",
         "Alinhamento das carteiras ao perfil de risco e aos objetivos de cada cliente."
-      ]
+      ],
+      tags: ["Alocação de ativos", "Gestão de carteiras", "Produtos financeiros", "Perfil de risco"]
     },
     {
       cargo: "Auxiliar Administrativo e Controle Financeiro",
@@ -68,7 +103,8 @@ window.CV = {
         "Organização e execução do fluxo de caixa e do DRE, assegurando visibilidade sobre a saúde financeira e a performance do negócio.",
         "Gerenciamento de projetos operacionais, incluindo a supervisão da implantação do site e do canal de e-commerce.",
         "Monitoramento contínuo de indicadores para manter a eficiência operacional e a satisfação dos clientes."
-      ]
+      ],
+      tags: ["Fluxo de caixa", "DRE", "Relatórios financeiros", "Gestão de projetos", "Indicadores (KPIs)", "E-commerce"]
     }
   ],
 
@@ -77,7 +113,7 @@ window.CV = {
       curso: "Bacharelado em Ciências Econômicas",
       instituicao: "Universidade Federal do Rio de Janeiro (UFRJ)",
       periodo: "mar/2024 – dez/2027 (previsto)",
-      descricao: "6º período · CR acumulado: 8,1"
+      descricao: "6º período · CR acumulado: 8,0"
     },
     {
       curso: "Texas Tech University High School Course",
@@ -93,23 +129,17 @@ window.CV = {
     }
   ],
 
+  // Quem tem "imagem" aparece em destaque, com miniatura que amplia ao clicar; o resto fica em "ver mais".
+  // Para adicionar um certificado: salve o JPG em img/certs/ e preencha "imagem".
   certificacoes: [
-    { nome: "CPA — Certificação Profissional ANBIMA", emissor: "ANBIMA", ano: "Distribuição de produtos de investimento" },
-    { nome: "Certificação ANCORD — Agente Autônomo de Investimentos (AAI)", emissor: "ANCORD", ano: "" },
-    { nome: "Pré-Mestrado Internacional em Inteligência Artificial", emissor: "Magno Alves e Faculdade HUB", ano: "" },
-    { nome: "Institute for Academic and Professional Studies (IAPS)", emissor: "University of Pennsylvania", ano: "Habilidades acadêmicas e comunicação profissional em inglês" },
-    { nome: "Método Gestão Inteligente", emissor: "", ano: "" }
+    { nome: "CPA — Certificação Profissional ANBIMA", emissor: "ANBIMA", ano: "", detalhe: "Distribuição de produtos de investimento", imagem: "img/certs/cpa.jpg" },
+    { nome: "Certificação ANCORD — Assessor de Investimento (AAI)", emissor: "ANCORD", ano: "ago/2026", detalhe: "Exame de Qualificação Técnica para Assessor de Investimento", imagem: "img/certs/ancord.jpg" },
+    { nome: "Pré-Mestrado Internacional em Inteligência Artificial", emissor: "Magno Maciel e Faculdade HUB", ano: "mar/2026", detalhe: "", imagem: "img/certs/pre-mestrado-ia.jpg" },
+    { nome: "Institute for Academic and Professional Studies (IAPS)", emissor: "University of Pennsylvania", ano: "", detalhe: "Habilidades acadêmicas e comunicação profissional em inglês", imagem: "img/certs/upenn-iaps.jpg" },
+    { nome: "Método Gestão Inteligente", emissor: "", ano: "", detalhe: "" }
   ],
 
-  // Áreas de competência (lista)
-  areas: [
-    "Alocação de ativos, análise de produtos financeiros e gestão de carteiras",
-    "Administração financeira, relatórios financeiros, fluxo de caixa e DRE",
-    "Economia e inteligência artificial aplicada",
-    "Gestão de projetos e acompanhamento de indicadores operacionais"
-  ],
-
-  // Competências em formato de etiqueta
+  // Competências em formato de etiqueta (também rodam no letreiro)
   competencias: [
     "CPA ANBIMA", "ANCORD", "Alocação de ativos", "Gestão de carteiras", "Produtos financeiros", "Perfil de risco",
     "Fluxo de caixa", "DRE", "Relatórios financeiros", "Inteligência artificial",
@@ -121,5 +151,8 @@ window.CV = {
     { idioma: "Português", rotulo: "Nativo", nivel: 100 },
     { idioma: "Inglês", rotulo: "Fluente", nivel: 90 },
     { idioma: "Espanhol", rotulo: "Intermediário", nivel: 55 }
-  ]
+  ],
+
+  contato:
+    "Para falar sobre mercado financeiro, alocação de ativos ou oportunidades, me chame no WhatsApp ou por e-mail."
 };

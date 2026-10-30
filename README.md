@@ -1,27 +1,37 @@
-# Currículo online
+# Portfólio · Bruno Santopietro Machado
 
-Site estático (HTML, CSS e JavaScript puros, sem build) pronto para o GitHub Pages.
+Site estático (HTML, CSS e JavaScript puros, sem build) publicado no GitHub Pages:
+**https://brunosanto15.github.io/portfolio/**
+
+## Estrutura
+
+```
+portfolio/
+├── index.html        estrutura das seções
+├── data.js           TODO o conteúdo (textos, experiência, formação, certificados, links)
+├── css/style.css     cores, fontes, layout e animações
+├── js/script.js      monta a página a partir do data.js e controla as interações
+└── img/
+    ├── bruno.jpg     foto do topo
+    └── certs/        imagens dos certificados (miniatura + visualizador)
+```
 
 ## Editar o conteúdo
 
-Todo o texto fica em `data.js`. Substitua os campos marcados com `[ ]` pelas informações do seu LinkedIn.
-Para usar uma foto, coloque o arquivo (ex.: `foto.jpg`) nesta pasta e preencha `foto: "foto.jpg"`.
+Quase tudo se muda só no `data.js`.
 
-## Publicar no GitHub Pages
+- **Foto:** troque `img/bruno.jpg` (quadrada, ~800 px).
+- **Certificado com imagem:** salve o JPG em `img/certs/` e preencha `imagem: "img/certs/arquivo.jpg"`. Quem tem imagem aparece em destaque, com miniatura que amplia ao clicar; quem não tem vai para "ver mais".
+- **WhatsApp:** `links.whatsapp` (só números, com 55 + DDD) e `links.whatsappMensagem`.
 
-1. Crie um repositório chamado **`seu-usuario.github.io`** (o site fica em `https://seu-usuario.github.io`).
-   Com outro nome, o endereço vira `https://seu-usuario.github.io/nome-do-repo`.
-2. No repositório, clique em **Add file → Upload files** e envie `index.html`, `style.css`, `script.js`, `data.js` (e a foto, se tiver).
-3. Vá em **Settings → Pages**, em *Source* escolha **Deploy from a branch**, branch `main`, pasta `/ (root)`, e salve.
-4. Em um ou dois minutos o site está no ar.
+Para ver localmente, abra o `index.html` no navegador.
 
-## Interações ao rolar a página
+## Publicar
 
-- Barra de progresso no topo e menu que destaca a seção atual
-- Nome animado letra por letra e frases "digitando" no topo
-- Fundo com parallax
-- Seção "Sobre" fixa na tela, com as palavras acendendo conforme você rola
-- Números que contam até o valor quando aparecem
-- Linha da trajetória que vai sendo desenhada e cards que deslizam para dentro
-- Barras de habilidade que se preenchem
-- Tema claro/escuro e animações reduzidas para quem prefere menos movimento
+```
+git add .
+git commit -m "Descreva a mudança"
+git push
+```
+
+O site atualiza em 1 a 2 minutos.
