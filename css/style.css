@@ -56,7 +56,8 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
+/* clip (e não hidden) corta qualquer vazamento lateral sem quebrar o position: sticky */
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); overflow-x: clip; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -66,7 +67,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background 0.4s, color 0.4s;
 }
 a { color: inherit; text-decoration: none; }
@@ -599,11 +600,15 @@ body.lb-aberto { overflow: hidden; }
   .indice > p { display: none; }
   /* as três pílulas dividem a largura: nada para arrastar */
   .indice ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
-  .indice a { justify-content: center; border: 1px solid var(--border); border-radius: 999px; padding: 7px 6px; white-space: nowrap; font-size: 0.84rem; }
+  .indice li { min-width: 0; }
+  .indice a { justify-content: center; min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 999px; padding: 7px 4px; white-space: nowrap; font-size: min(0.84rem, 3.5vw); }
+  .indice a span:last-child { overflow: hidden; text-overflow: ellipsis; }
   .indice a span:first-child { display: none; }
   .indice a::before { display: none; }
   .indice a.on { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
-  .numeros-grid { grid-template-columns: 1fr 1fr; row-gap: 36px; }
+  .numeros-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+  .pv { padding: 4px 0 4px 16px; min-width: 0; }
+  .pv a { flex-wrap: wrap; }
   .pv:nth-child(odd) { border-left: 0; padding-left: 0; }
   /* capacidades no celular: sem painel, o item ativo abre o texto como sanfona */
   .caps { grid-template-columns: 1fr; }
