@@ -24,7 +24,7 @@ window.CV = {
   // Links que contêm "[" são ocultados até você preencher
   links: {
     linkedin: "https://www.linkedin.com/in/bruno-santopietro-machado/",
-    github: "https://github.com/brunosanto15",
+    github: "https://github.com/brunosantopietro",
     email: "brunosanto1510@gmail.com",
     whatsapp: "5521999298376", // só números, com DDI 55 e DDD
     whatsappMensagem: "Olá, Bruno! Vim pelo seu portfólio e queria conversar."

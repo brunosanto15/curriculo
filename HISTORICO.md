@@ -1,7 +1,7 @@
 # Histórico do projeto — Portfólio
 
-**Site no ar:** https://brunosanto15.github.io/portfolio/
-**Repositório:** https://github.com/brunosanto15/portfolio (branch `main`, GitHub Pages na raiz)
+**Site no ar:** https://brunosantopietro.github.io/portfolio/
+**Repositório:** https://github.com/brunosantopietro/portfolio (branch `main`, GitHub Pages na raiz)
 **Última atualização:** 30/10/2026
 
 O repositório se chamava `curriculo` até 30/10/2026.
@@ -51,4 +51,4 @@ Projetos/Portfólio/
 
 Abra a pasta do projeto no VS Code (ou o Claude Code nela) e cole:
 
-> Este é o meu portfólio (HTML/CSS/JS puros, publicado no GitHub Pages em https://brunosanto15.github.io/portfolio/, repositório brunosanto15/portfolio). Leia o HISTORICO.md e os arquivos do projeto antes de mudar algo. Todo o conteúdo fica no data.js. Mantenha o estilo atual: base branca e cinza com azul-escuro #0b2a5b de contraste, fontes Literata, Inter e DM Mono, e as interações existentes. Edite só localmente e publique quando eu pedir. Quero: [descreva a mudança]
+> Este é o meu portfólio (HTML/CSS/JS puros, publicado no GitHub Pages em https://brunosantopietro.github.io/portfolio/, repositório brunosantopietro/portfolio). Leia o HISTORICO.md e os arquivos do projeto antes de mudar algo. Todo o conteúdo fica no data.js. Mantenha o estilo atual: base branca e cinza com azul-escuro #0b2a5b de contraste, fontes Literata, Inter e DM Mono, e as interações existentes. Edite só localmente e publique quando eu pedir. Quero: [descreva a mudança]

@@ -1,7 +1,7 @@
 # Portfólio · Bruno Santopietro Machado
 
 Site estático (HTML, CSS e JavaScript puros, sem build) publicado no GitHub Pages:
-**https://brunosanto15.github.io/portfolio/**
+**https://brunosantopietro.github.io/portfolio/**
 
 ## Estrutura
 
