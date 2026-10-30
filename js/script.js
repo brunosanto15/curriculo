@@ -15,10 +15,8 @@
   // ---------- tema (o valor salvo já foi aplicado no <head>) ----------
   const root = document.documentElement;
   $("#theme-btn").addEventListener("click", () => {
-    const isDark = root.dataset.theme
-      ? root.dataset.theme === "dark"
-      : window.matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = isDark ? "light" : "dark";
+    // o padrão é o claro; o escuro só existe quando a pessoa escolhe
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     try { localStorage.setItem("tema", root.dataset.theme); } catch (e) {}
   });
 
@@ -727,11 +725,6 @@
       if (i === k) a.setAttribute("aria-current", "true");
       else a.removeAttribute("aria-current");
     });
-    // no celular o índice é uma fileira de pílulas: a ativa entra na tela (só na horizontal)
-    const ol = $("ol", indice);
-    if (ol.scrollWidth > ol.clientWidth) {
-      ol.scrollTo({ left: Math.max(0, iLinks[k].parentNode.offsetLeft - 16), behavior: reduceMotion ? "auto" : "smooth" });
-    }
   }
 
   let ticking = false;
